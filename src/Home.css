@@ -1,0 +1,221 @@
+.banner {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contenido-banner {
+  text-align: center;
+  padding: 20px;
+}
+
+.boton-personalizar {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.brand-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.brand-item {
+  text-align: center;
+  position: relative;
+  margin: 10px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-image {
+  width: 200px; /* Tamaño aumentado */
+  height: 200px; /* Tamaño aumentado */
+  object-fit: cover;
+  border-radius: 50%; /* Forma circular */
+}
+
+.description {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  font-family: Verdana, sans-serif;
+  transition: opacity 0.3s ease;
+}
+
+.brand-item:hover .description {
+  opacity: 1;
+}
+
+.brand-name {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.leer-mas {
+  display: block;
+  text-align: center;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.container-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-modal {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.input-box {
+  margin-bottom: 15px;
+}
+
+.input-box input, 
+.input-box select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-group button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-group button[type="submit"] {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-group button[type="button"] {
+  background-color: #ccc;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+  .banner {
+    height: 250px;
+  }
+
+  .brand-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .content-modal {
+    width: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  .banner {
+    height: 200px;
+  }
+
+  .brand-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .brand-container {
+    justify-content: center;
+  }
+
+  .content-modal {
+    width: 90%;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .btn-group button:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner {
+    height: 150px;
+  }
+
+  .brand-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .brand-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-modal {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+
+  .btn-group button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .btn-group button:last-child {
+    margin-bottom: 0;
+  }
+}

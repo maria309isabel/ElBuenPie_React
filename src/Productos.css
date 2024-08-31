@@ -1,0 +1,179 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(170, 199, 215, 1);
+    margin: 0;
+    padding: 0;
+}
+
+#banner {
+    padding: 0 50px;
+    background-size: cover;
+    background-position: center;
+    height: 45vh;
+    margin: 0 -8px;
+}
+
+#banner .slide {
+    height: 100%;
+    width: 100%;
+}
+
+#banner .img {
+    width: 100%;
+    height: 100%;
+}
+
+#estilos {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+#estilos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#estilos img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#estilos div:hover img {
+    transform: scale(1.1);
+}
+
+#estilos h4,
+#estilos p {
+    margin: 10px 0;
+}
+
+.container-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.content-modal {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: relative;
+}
+
+.content-modal h2 {
+    margin-bottom: 15px;
+}
+
+.input-box {
+    margin-bottom: 15px;
+}
+
+.input-box input, 
+.input-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-group button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-group button[type="submit"] {
+    background-color: #000;
+    color: #fff;
+}
+
+.btn-group button[type="button"] {
+    background-color: #ccc;
+}
+
+/* Media Queries */
+
+@media (max-width: 1200px) {
+    #estilos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    #estilos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #banner {
+        padding: 0 20px;
+    }
+
+    .content-modal {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    #estilos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #banner {
+        height: 35vh;
+        padding: 0 10px;
+    }
+
+    #estilos img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .content-modal {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-group button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .btn-group button:last-child {
+        margin-bottom: 0;
+    }
+}
