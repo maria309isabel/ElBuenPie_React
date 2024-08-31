@@ -44,10 +44,10 @@
 }
 
 .brand-image {
-  width: 200px; /* Tamaño aumentado */
-  height: 200px; /* Tamaño aumentado */
+  width: 200px; 
+  height: 200px; 
   object-fit: cover;
-  border-radius: 50%; /* Forma circular */
+  border-radius: 50%; 
 }
 
 .description {

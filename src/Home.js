@@ -83,9 +83,9 @@ const Home = () => {
               </div>
             </div>
             <p className="brand-name">Lacoste</p>
-            <button onClick={() => alert('Más información sobre Lacoste')} className="leer-mas">
+            <a href="https://www.lacoste.com/es/" target="_blank" rel="noopener noreferrer" className="leer-mas">
               Leer más
-            </button>
+            </a>
           </div>
 
           <div className="brand-item">
@@ -96,9 +96,9 @@ const Home = () => {
               </div>
             </div>
             <p className="brand-name">Nike</p>
-            <button onClick={() => alert('Más información sobre Nike')} className="leer-mas">
+            <a href="https://www.nike.com" target="_blank" rel="noopener noreferrer" className="leer-mas">
               Leer más
-            </button>
+            </a>
           </div>
 
           <div className="brand-item">
@@ -109,13 +109,12 @@ const Home = () => {
               </div>
             </div>
             <p className="brand-name">Vizzano</p>
-            <button onClick={() => alert('Más información sobre Vizzano')} className="leer-mas">
+            <a href="https://viale.pe/marca/vizzano-29" target="_blank" rel="noopener noreferrer" className="leer-mas">
               Leer más
-            </button>
+            </a>
           </div>
         </div>
       </section>
-
       {modalVisible && (
         <div className="container-modal">
           <div className="content-modal">

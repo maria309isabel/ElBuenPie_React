@@ -66,6 +66,7 @@ header {
   color: white;
 }
 
+/*RESPONSIVE MENU */ 
 @media (max-width: 768px) {
   .mostrar-menu {
     display: block;
